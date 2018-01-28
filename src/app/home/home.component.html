@@ -1,0 +1,69 @@
+<div class="container">
+  <h1 style="background-color: lightgrey; width: 300px">Recommended Books</h1>
+  <div fxLayout="row" fxLayoutAlign="start center" class="content">
+    <div class="blocks" *ngFor="let book of recommendedBooks" fxFlex = "25%">
+      <md-card class="book-card">
+        <md-card-title>{{book.title}}</md-card-title>
+        <md-card-subtitle>By {{book.author}}</md-card-subtitle>
+        <a href="../book">
+          <img class="book-card-image"  md-card-image src={{book.src}}>
+        </a>
+        <md-card-content >
+          <p>{{book.price}}</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>
+            <md-icon>add_shopping_cart</md-icon>
+            Add to Cart
+          </button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h1 style="background-color: lightgrey; width: 180px">Latest Books</h1>
+  <div fxLayout="row" fxLayoutAlign="start center" class="content">
+    <div class="blocks" *ngFor="let book of latestBooks" fxFlex = "25%">
+      <md-card class="book-card">
+        <md-card-title>{{book.title}}</md-card-title>
+        <md-card-subtitle>By {{book.author}}</md-card-subtitle>
+        <a href="../book">
+          <img class="book-card-image"  md-card-image src={{book.src}}>
+        </a>
+        <md-card-content >
+          <p>{{book.price}}</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>
+            <md-icon>add_shopping_cart</md-icon>
+            Add to Cart
+          </button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h1 style="background-color: lightgrey; width: 240px">Best Seller Books</h1>
+  <div fxLayout="row" fxLayoutAlign="start center" class="content">
+    <div class="blocks" *ngFor="let book of bestsellingBooks" fxFlex = "25%">
+      <md-card class="book-card">
+        <md-card-title>{{book.title}}</md-card-title>
+        <md-card-subtitle>By {{book.author}}</md-card-subtitle>
+        <a href="../book">
+          <img class="book-card-image"  md-card-image src={{book.src}}>
+        </a>
+        <md-card-content >
+          <p class="book-home-card-price">{{book.price}}</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>
+            <md-icon>add_shopping_cart</md-icon>
+            Add to Cart
+          </button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>

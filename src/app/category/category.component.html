@@ -1,0 +1,30 @@
+<div class="container">
+  <div fxLayout="row" fxLayoutAlign="start center" class="content" >
+    <div class="blocks" fxFlex="15%" >
+      <h1 class="category-page-title">Action</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div fxLayout="row" fxLayoutAlign="start center" class="content">
+    <div class="blocks" *ngFor="let book of books" fxFlex = "25%">
+      <md-card class="book-card">
+        <md-card-title>{{book.title}}</md-card-title>
+        <md-card-subtitle>By {{book.author}}</md-card-subtitle>
+        <a href="../book">
+          <img class="book-card-image"  md-card-image src={{book.src}}>
+        </a>
+        <md-card-content >
+          <p>{{book.price}}</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>
+            <md-icon>add_shopping_cart</md-icon>
+            Add to Cart
+          </button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>

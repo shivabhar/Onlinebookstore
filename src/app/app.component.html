@@ -1,0 +1,36 @@
+<md-toolbar color = "primary" >
+  <button md-icon-button>
+    <md-icon [routerLink]="['/home']">home</md-icon>
+  </button>
+  <h2 class = "title">{{title}}</h2>
+  <span class="example-spacer"></span>
+  <div class="wrap">
+    <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <button type="submit" class="searchButton">
+        <md-icon [routerLink]="['/search-result']">search</md-icon>
+      </button>
+    </div>
+  </div>
+  <span class="example-spacer"></span>
+  <nav id="primary_nav_wrap">
+    <ul>
+      <li><a href="#">Categories</a>
+        <ul>
+          <li><a href="category">Action</a></li>
+          <li><a href="category">Drama</a></li>
+          <li><a href="category">Romance</a></li>
+          <li><a href="category">Sci-fi</a></li>
+          <li><a href="category">Comedy</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+  <button md-button [routerLink]="['/shopping-cart']">
+    <md-icon>shopping_cart</md-icon>
+    <span>Shopping cart</span>
+  </button>
+</md-toolbar>
+
+<router-outlet></router-outlet>

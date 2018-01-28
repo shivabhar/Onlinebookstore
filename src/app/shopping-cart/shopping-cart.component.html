@@ -1,0 +1,31 @@
+
+      <md-card *ngFor="let book of books">
+        <div class="container">
+          <div fxLayout="row" fxLayoutAlign="start center" class="content" >
+            <div class="blocks" fxFlex="4%">
+              <a href="../book">
+                <img class="shopping-cart-page-image" md-card-image src={{book.src}}>
+              </a>
+            </div>
+            <span class="example-spacer"></span>
+            <div class="blocks" fxFlex="80%">
+              <md-card-title>
+                {{book.title}}
+              </md-card-title>
+              <div class="shopping-cart-page-description">
+                {{book.description}}
+              </div>
+              <div class="shopping-cart-page-price">
+                {{book.price}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </md-card>
+      <md-card class="container">
+        <div fxLayout="row" fxLayoutAlign="start center" class="content" >
+          <span class="example-spacer"></span>
+          <p>Total: CDN$ 88.97</p>
+          <button md-button class="blocks" [routerLink]="['/checkout']">Checkout</button>
+        </div>
+      </md-card>
